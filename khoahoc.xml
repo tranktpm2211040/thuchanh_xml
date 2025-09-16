@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses xmlns:course="http://example.com/course"
+         xmlns:instructor="http://example.com/instructor"
+         xmlns:student="http://example.com/student">
+
+    <!-- Khóa học 1 -->
+    <course:course id="C001" title="Lập trình Java" category="Lập trình">
+        <instructor:instructor id="I001" name="Nguyễn Văn Trấn" email="nva@example.com"/>
+        <student:student id="S001" name="Trần Thị B" progress="80"/>
+        <student:student id="S002" name="Lê Văn C" progress="60"/>
+        <student:student id="S003" name="Phạm Thị D" progress="90"/>
+    </course:course>
+
+    <!-- Khóa học 2 -->
+    <course:course id="C002" title="Thiết kế Web" category="Thiết kế">
+        <instructor:instructor id="I002" name="Lê Công Thức" email="hve@example.com"/>
+        <student:student id="S004" name="Ngô Thị F" progress="70"/>
+        <student:student id="S005" name="Phan Văn G" progress="85"/>
+    </course:course>
+
+</courses>

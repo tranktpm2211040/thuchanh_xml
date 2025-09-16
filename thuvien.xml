@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thuvien>
+    <sach>
+        <tieude>Lập trình C cơ bản</tieude>
+        <tacgia>Nguyễn Văn A</tacgia>
+        <namxuatban>2020</namxuatban>
+        <theloai>Khoa học máy tính</theloai>
+    </sach>
+    <sach>
+        <tieude>Truyện Kiều</tieude>
+        <tacgia>Nguyễn Du</tacgia>
+        <namxuatban>1813</namxuatban>
+        <theloai>Văn học</theloai>
+    </sach>
+    <sach>
+        <tieude>Harry Potter và Hòn đá Phù thủy</tieude>
+        <tacgia>J.K. Rowling</tacgia>
+        <namxuatban>1997</namxuatban>
+        <theloai>Tiểu thuyết</theloai>
+    </sach>
+</thuvien>
