@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orders SYSTEM "orders.dtd">
+<orders>
+    <order id="O001">
+        <product id="P001">
+            <name>Chuột máy tính</name>
+            <quantity>2</quantity>
+        </product>
+        <product id="P002">
+            <name>Bàn phím cơ</name>
+            <quantity>1</quantity>
+        </product>
+    </order>
+
+    <order id="O002">
+        <product id="P003">
+            <name>Màn hình 24 inch</name>
+            <quantity>3</quantity>
+        </product>
+        <product id="P004">
+            <name>Tai nghe</name>
+            <quantity>2</quantity>
+        </product>
+    </order>
+</orders>
