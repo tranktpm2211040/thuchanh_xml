@@ -1,0 +1,19 @@
+<!ELEMENT courses (course:course+)>
+
+<!ELEMENT course:course (instructor:instructor, student:student+)>
+<!ATTLIST course:course
+    id ID #REQUIRED
+    title CDATA #REQUIRED
+    category CDATA #REQUIRED>
+
+<!ELEMENT instructor:instructor EMPTY>
+<!ATTLIST instructor:instructor
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    email CDATA #REQUIRED>
+
+<!ELEMENT student:student EMPTY>
+<!ATTLIST student:student
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    progress CDATA #REQUIRED>

@@ -1,0 +1,7 @@
+<!ELEMENT thuvien (sach+)>
+<!ELEMENT sach (tieude, tacgia, namxuatban, theloai)>
+
+<!ELEMENT tieude (#PCDATA)>
+<!ELEMENT tacgia (#PCDATA)>
+<!ELEMENT namxuatban (#PCDATA)>
+<!ELEMENT theloai (#PCDATA)>
