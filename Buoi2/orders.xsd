@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="orders">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Danh sách các order -->
+                <xs:element name="order" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Danh sách các sản phẩm trong order -->
+                            <xs:element name="product" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="quantity" type="xs:integer"/>
+                                    </xs:sequence>
+                                    <!-- id sản phẩm: unique trong phạm vi 1 order -->
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <!-- id của order: duy nhất toàn cục -->
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+
+                    <!-- Ràng buộc: product.id phải duy nhất trong mỗi order -->
+                    <xs:unique name="UniqueProductIDWithinOrder">
+                        <xs:selector xpath="product"/>
+                        <xs:field xpath="@id"/>
+                    </xs:unique>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

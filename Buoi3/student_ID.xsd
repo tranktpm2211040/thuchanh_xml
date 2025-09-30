@@ -1,0 +1,24 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Khai báo phần tử gốc -->
+    <xs:element name="school">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Danh sách student (nhiều student) -->
+                <xs:element name="student" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Tên sinh viên -->
+                            <xs:element name="name" type="xs:string"/>
+                            <!-- Ngày sinh, định dạng YYYY-MM-DD -->
+                            <xs:element name="date" type="xs:date"/>
+                        </xs:sequence>
+                        <!-- Thuộc tính ID (giống khóa chính) -->
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
