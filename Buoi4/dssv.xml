@@ -1,0 +1,38 @@
+<DSSV>
+    <!-- Danh sách khoa -->
+    <KHOA>
+        <MAKHOA>CNTT</MAKHOA>
+        <TENK>CongNgheThongTin</TENK>
+    </KHOA>
+
+    <!-- Danh sách lớp -->
+    <LOP>
+        <MALOP>KTPM</MALOP>
+        <TENLOP>KTPM2211</TENLOP>
+        <MAKHOA>CNTT</MAKHOA>
+    </LOP>
+    <LOP>
+        <MALOP>HTTT</MALOP>
+        <TENLOP>HTTT2211</TENLOP>
+        <MAKHOA>CNTT</MAKHOA>
+    </LOP>
+
+    <!-- Danh sách sinh viên -->
+    <SINHVIEN>
+        <MSSV>KTPM2211040</MSSV>
+        <HOTEN>Nguyen Hoang Tran</HOTEN>
+        <EMAIL>a@example.com</EMAIL>
+        <DIACHI>SocTrang</DIACHI>
+        <SDT>0912345678</SDT>
+        <MALOP>KTPM</MALOP>
+    </SINHVIEN>
+
+    <SINHVIEN>
+        <MSSV>KTPM2211010</MSSV>
+        <HOTEN>Le Cong Thuc</HOTEN>
+        <EMAIL>b@example.com</EMAIL>
+        <DIACHI>Can Tho</DIACHI>
+        <SDT>0987654321</SDT>
+        <MALOP>KTPM</MALOP>
+    </SINHVIEN>
+</DSSV>
