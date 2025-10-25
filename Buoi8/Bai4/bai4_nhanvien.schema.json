@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema cho Danh sách Nhân viên",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ID": {
+        "description": "Mã số nhân viên duy nhất",
+        "type": "string"
+      },
+      "ho_ten": {
+        "description": "Họ và tên đầy đủ của nhân viên",
+        "type": "string"
+      },
+      "chuc_vu": {
+        "description": "Chức vụ của nhân viên trong công ty",
+        "type": "string"
+      },
+      "muc_luong": {
+        "description": "Mức lương hàng tháng (tính bằng VND)",
+        "type": "number",
+        "minimum": 0
+      },
+      "trang_thai_lam_viec": {
+        "description": "Tình trạng làm việc hiện tại của nhân viên",
+        "type": "string",
+        "enum": [
+          "đang làm",
+          "nghỉ việc"
+        ]
+      }
+    },
+    "required": [
+      "ID",
+      "ho_ten",
+      "chuc_vu",
+      "muc_luong",
+      "trang_thai_lam_viec"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema cho Sách",
+  "type": "object",
+  "properties": {
+    "tieu_de": {
+      "description": "Tiêu đề của cuốn sách",
+      "type": "string"
+    },
+    "tac_gia": {
+      "description": "Tác giả của cuốn sách",
+      "type": "string"
+    },
+    "nam_xuat_ban": {
+      "description": "Năm sách được xuất bản",
+      "type": "integer"
+    },
+    "the_loai": {
+      "description": "Danh sách các thể loại của sách",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "so_trang": {
+      "description": "Tổng số trang của sách",
+      "type": "integer",
+      "minimum": 1
+    },
+    "danh_gia": {
+      "description": "Điểm đánh giá sách (ví dụ: từ 0 đến 5)",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 5
+    }
+  },
+  "required": [
+    "tieu_de",
+    "tac_gia",
+    "nam_xuat_ban",
+    "the_loai",
+    "so_trang"
+  ]
+}

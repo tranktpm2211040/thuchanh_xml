@@ -1,0 +1,23 @@
+[
+  {
+    "ID": "NV001",
+    "ho_ten": "Trần Thị B",
+    "chuc_vu": "Trưởng phòng Kế toán",
+    "muc_luong": 35000000,
+    "trang_thai_lam_viec": "đang làm"
+  },
+  {
+    "ID": "NV002",
+    "ho_ten": "Lê Văn C",
+    "chuc_vu": "Lập trình viên Senior",
+    "muc_luong": 40000000,
+    "trang_thai_lam_viec": "đang làm"
+  },
+  {
+    "ID": "NV003",
+    "ho_ten": "Phạm Gia H",
+    "chuc_vu": "Nhân viên Marketing",
+    "muc_luong": 20000000,
+    "trang_thai_lam_viec": "nghỉ việc"
+  }
+]

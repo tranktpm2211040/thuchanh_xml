@@ -1,0 +1,20 @@
+[
+  {
+    "ten_san_pham": "Bàn phím cơ",
+    "gia_tien": 1500000,
+    "so_luong_ton_kho": 150,
+    "danh_muc": "Phụ kiện máy tính"
+  },
+  {
+    "ten_san_pham": "Chuột không dây",
+    "gia_tien": 450000,
+    "so_luong_ton_kho": 200,
+    "danh_muc": "Phụ kiện máy tính"
+  },
+  {
+    "ten_san_pham": "Màn hình 24 inch",
+    "gia_tien": 3000000,
+    "so_luong_ton_kho": 75,
+    "danh_muc": "Thiết bị ngoại vi"
+  }
+]
