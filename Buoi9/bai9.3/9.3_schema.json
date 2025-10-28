@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Chuỗi, bắt đầu bằng 'U' và theo sau là 5 chữ số.",
+      "type": "string",
+      "pattern": "^U[0-9]{5}$"
+    },
+    "name": {
+      "description": "Chuỗi, ít nhất 3 ký tự, nhiều nhất 50 ký tự.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 50
+    },
+    "age": {
+      "description": "Số nguyên, từ 10 đến 18.",
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 18
+    },
+    "email": {
+      "description": "Phải đúng định dạng email.",
+      "type": "string",
+      "format": "email"
+    },
+    "isActive": {
+      "description": "Là boolean, không bắt buộc.",
+      "type": "boolean"
+    },
+    "address": {
+      "description": "Là object, bắt buộc có city, district, street.",
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "district": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "Phải khớp regex ^[0-9]{6}$.",
+          "type": "string",
+          "pattern": "^[0-9]{6}$"
+        }
+      },
+      "required": [
+        "city",
+        "district",
+        "street"
+      ]
+    },
+    "courses": {
+      "description": "Mảng các khóa học, ít nhất 1 phần tử.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "chuỗi, không rỗng.",
+            "type": "string",
+            "minLength": 1
+          },
+          "score": {
+            "description": "số từ 0 đến 10, có thể là số thực.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "teacher": {
+            "description": "object gồm name (chuỗi) và email (định dạng email).",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string",
+                "format": "email"
+              }
+            },
+            "required": [
+              "name",
+              "email"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "score",
+          "teacher"
+        ]
+      }
+    },
+    "createdAt": {
+      "description": "Chuỗi định dạng ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "role": {
+      "description": "Chỉ được phép là 'student', 'teacher', hoặc 'admin'.",
+      "type": "string",
+      "enum": [
+        "student",
+        "teacher",
+        "admin"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "age",
+    "email",
+    "address",
+    "courses",
+    "createdAt",
+    "role"
+  ]
+}

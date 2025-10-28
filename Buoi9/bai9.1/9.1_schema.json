@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "Là chuỗi, dài tối thiểu 3 ký tự, tối đa 100 ký tự.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 100
+    },
+    "author": {
+      "description": "Là chuỗi, không được rỗng.",
+      "type": "string",
+      "minLength": 1
+    },
+    "price": {
+      "description": "Là số, phải lớn hơn 0.",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "inStock": {
+      "description": "Là boolean (true/false).",
+      "type": "boolean"
+    },
+    "categories": {
+      "description": "Là mảng chuỗi, mỗi phần tử dài ít nhất 2 ký tự.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2
+      }
+    },
+    "rating": {
+      "description": "Là số, nằm trong khoảng 0 đến 5, không bắt buộc.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 5
+    }
+  },
+  "required": [
+    "title",
+    "author",
+    "price",
+    "inStock"
+  ]
+}

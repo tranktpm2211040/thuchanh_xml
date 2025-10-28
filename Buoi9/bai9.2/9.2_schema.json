@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "description": "Kiểu chuỗi, 3-15 ký tự, chỉ chữ cái và số.",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 15,
+            "pattern": "^[a-zA-Z0-9]+$"
+          },
+          "password": {
+            "description": "Chuỗi, tối thiểu 8 ký tự, có hoa, thường, số, và ký tự đặc biệt.",
+            "type": "string",
+            "minLength": 8,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).*$"
+          },
+          "emails": {
+            "description": "Mảng các email, mỗi email phải đúng định dạng.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            }
+          },
+          "age": {
+            "description": "Số nguyên, từ 13 đến 100.",
+            "type": "integer",
+            "minimum": 13,
+            "maximum": 100
+          },
+          "address": {
+            "description": "Object có 2 trường: city (bắt buộc) và street (không bắt buộc).",
+            "type": "object",
+            "properties": {
+              "city": {
+                "type": "string",
+                "minLength": 1
+              },
+              "street": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "city"
+            ]
+          },
+          "hobbies": {
+            "description": "Mảng chuỗi, mỗi phần tử dài ít nhất 2 ký tự. Không bắt buộc.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 2
+            }
+          },
+          "isVerified": {
+            "description": "Kiểu boolean, mặc định là false nếu không có.",
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "username",
+          "password",
+          "emails",
+          "age",
+          "address"
+        ]
+      }
+    }
+  },
+  "required": [
+    "users"
+  ]
+}
